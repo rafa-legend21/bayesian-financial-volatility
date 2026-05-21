@@ -196,14 +196,6 @@ Instead of producing only one fixed volatility estimate, Bayesian inference can 
 
 This is useful because financial markets are uncertain and constantly evolving.
 
-### Bayesian Volatility Demonstration
-
-In financial time series analysis, volatility can be viewed as a hidden process. The returns are observed, but the true level of market uncertainty is not directly observed. This motivates stochastic volatility models and Bayesian approaches.
-
-![Bayesian Volatility Demonstration](plots/bayesian_volatility_tesla.png)
-
-The line shows the estimated volatility level, while the shaded region represents uncertainty around that estimate. This demonstrates how Bayesian methods can describe uncertainty instead of producing only one fixed volatility number.
-
 ## Why This Matters
 
 These techniques are useful because financial risk is not constant.
