@@ -46,6 +46,34 @@ The analysis can be applied to historical financial market data such as:
 
 The S&P 500 is a natural first choice because it represents broad market behavior and clearly shows volatility changes during different financial periods.
 
+## Asset Price Overview
+
+Before applying financial time series techniques, the first step is to visualize the raw price movement of each asset.
+
+The three assets selected here represent different types of financial behavior:
+
+- S&P 500: broad market index
+- Tesla: individual high-growth stock
+- Bitcoin: cryptocurrency with large price swings
+
+### S&P 500 Price Over Time
+
+![S&P 500 Price Over Time](plots/sp500_price_over_time.png)
+
+The S&P 500 provides a broad view of overall market movement and is useful for understanding general market trends.
+
+### Tesla Price Over Time
+
+![Tesla Price Over Time](plots/tesla_price_over_time.png)
+
+Tesla is useful for observing the behavior of an individual stock with large price movements and strong volatility.
+
+### Bitcoin Price Over Time
+
+![Bitcoin Price Over Time](plots/bitcoin_price_over_time.png)
+
+Bitcoin is useful for demonstrating highly volatile financial behavior and sharp changes across time.
+
 ## Methodology
 
 ### 1. Convert Prices to Log Returns
