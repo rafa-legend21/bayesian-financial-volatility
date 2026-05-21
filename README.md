@@ -161,13 +161,13 @@ Instead of producing only one fixed volatility estimate, Bayesian inference can 
 
 This is useful because financial markets are uncertain and constantly evolving.
 
-### Forecasting Demonstration
+### Bayesian Volatility Demonstration
 
-A simple ARIMA forecasting example is included to show how historical financial data can be used to generate a basic time series forecast.
+In financial time series analysis, volatility can be viewed as a hidden process. The returns are observed, but the true level of market uncertainty is not directly observed. This motivates stochastic volatility models and Bayesian approaches.
 
-![S&P 500 ARIMA Forecast](plots/sp500_arima_forecast.png)
+![Bayesian Volatility Demonstration](plots/bayesian_volatility_tesla.png)
 
-This forecast should be interpreted as a demonstration of the forecasting workflow, not as a reliable prediction of future market prices.
+The line shows the estimated volatility level, while the shaded region represents uncertainty around that estimate. This demonstrates how Bayesian methods can describe uncertainty instead of producing only one fixed volatility number.
 
 ## Why This Matters
 
