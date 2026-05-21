@@ -1,185 +1,181 @@
-This project extends concepts from my university time series analysis coursework into a practical financial volatility modeling case study.
-Bayesian Financial Volatility Analysis
+# Bayesian Financial Volatility Analysis
 
-A concise demonstration of several financial time series analysis techniques used to study changing market risk and volatility dynamics.
+## Introduction
 
-This repository focuses on understanding how uncertainty evolves through time rather than attempting to directly predict stock prices. The demonstration briefly explores log returns, volatility clustering, rolling volatility, and hidden volatility behavior in financial markets.
+This repository provides a concise demonstration of financial time series techniques used to understand how market risk changes over time.
 
-The ideas presented here are inspired by concepts from financial time series analysis, stochastic volatility modeling, and Bayesian inference.
+Instead of trying to predict stock prices directly, this demonstration focuses on volatility, uncertainty, and risk dynamics. In financial data, periods of calm and periods of stress often appear in clusters. This makes time series techniques especially useful for understanding when markets become more uncertain and how that uncertainty evolves.
 
-Motivation
+## Motivation
 
-Financial markets rarely behave with constant risk. Some periods are relatively stable, while others experience persistent large fluctuations.
+Financial markets do not move with constant risk. Some periods are relatively stable, while others experience large and persistent fluctuations.
 
-One of the most important observations in financial time series analysis is:
+One important pattern in financial time series is **volatility clustering**. This means that large market movements are often followed by more large movements, while calm periods tend to remain calm.
 
-Volatility Clustering
+This idea is useful in:
 
-Large market movements tend to be followed by more large movements, while calm periods tend to remain calm.
+- financial risk monitoring
+- portfolio management
+- actuarial and insurance risk analysis
+- derivative pricing
+- stress testing
+- quantitative finance
 
-Understanding this behavior is extremely important in:
+## Main Question
 
-quantitative finance,
-actuarial science,
-portfolio management,
-derivative pricing,
-stress testing,
-and financial risk monitoring.
-Financial Questions
+This demonstration focuses on the question:
 
-This demonstration explores questions such as:
+> How does market risk change over time?
 
-How does market risk evolve over time?
-Can periods of high volatility be identified?
-Why do financial returns exhibit clustering behavior?
-How can changing uncertainty be quantified dynamically?
-Why are traditional constant-variance assumptions often unrealistic?
-Data
+More specifically, it explores:
 
-The analysis may use historical financial market data such as:
+- When does the market become more volatile?
+- Do periods of market stress persist?
+- How can changing uncertainty be measured dynamically?
+- Why are constant-variance assumptions often unrealistic in financial data?
 
-S&P 500,
-Apple,
-Tesla,
-Bitcoin,
-or exchange rate data.
+## Data
 
-The S&P 500 is often preferred because it represents the broader market and clearly illustrates volatility behavior during financial events.
+The analysis can be applied to historical financial market data such as:
 
-Financial Returns
+- S&P 500
+- Apple
+- Tesla
+- Bitcoin
+- exchange rates
 
-Financial time series models typically analyze returns instead of raw prices.
+The S&P 500 is a natural first choice because it represents broad market behavior and clearly shows volatility changes during different financial periods.
+
+## Methodology
+
+### 1. Convert Prices to Log Returns
+
+Instead of analyzing raw prices directly, financial time series models usually work with returns.
 
 The log return is defined as:
 
-y
-t
-	​
-
-=100log(
-S
-t−1
-	​
-
-S
-t
-	​
-
-	​
-
-)
+```math
+y_t = 100 \log\left(\frac{S_t}{S_{t-1}}\right)
+```
 
 where:
+S_t is the asset price at time t
+y_t is the percentage log return
 
-S
-t
-	​
+Log returns make price movements easier to compare across time.
 
- represents the asset price at time t,
-and y
-t
-	​
+### 2. Visualize Return Behavior
 
- denotes the percentage log return.
+After computing log returns, the return series is plotted over time.
 
-Log returns are widely used because they:
+Typical patterns include:
 
-normalize scale,
-simplify modeling,
-and possess useful statistical properties.
-Volatility Clustering
+returns fluctuating around zero
+occasional extreme movements
+periods where large movements appear close together
 
-After plotting the return series, several important patterns usually appear:
+These patterns suggest that financial volatility is not constant.
 
-returns fluctuate around zero,
-extreme movements occasionally occur,
-periods of high variability tend to cluster together.
+### 3. Identify Volatility Clustering
 
-This phenomenon is known as volatility clustering.
+Volatility clustering means that high-volatility periods tend to be followed by more high-volatility periods.
 
-Financial markets therefore exhibit changing uncertainty through time rather than constant variance.
+This is important because it shows that financial risk can persist over time instead of appearing randomly and independently.
 
-Rolling Volatility
+### 4. Compute Rolling Volatility
 
-To quantify changing uncertainty, rolling volatility can be computed using rolling standard deviations over fixed windows such as:
+Rolling volatility is computed using rolling standard deviation windows, such as:
 
-20 trading days,
-60 trading days.
+20 trading days
+60 trading days
 
-This provides a time-varying measure of market risk.
+This provides a simple time-varying measure of market uncertainty.
 
-Volatility often spikes during:
+Rolling volatility often increases during:
 
-financial crises,
-economic shocks,
-geopolitical uncertainty,
-or major market corrections.
-Hidden Volatility Dynamics
+- financial crises
+- economic shocks
+- geopolitical uncertainty
+- major market corrections
 
-One important idea in modern financial time series analysis is that volatility itself may behave like a hidden stochastic process.
+### 5. Interpret Hidden Volatility Dynamics
 
-Observed returns may appear random, but the underlying level of uncertainty evolves dynamically over time.
+In financial time series analysis, volatility can be viewed as a hidden process.
 
-This motivates stochastic volatility models and latent-state approaches.
+The returns are observed, but the true level of market uncertainty is not directly observed. This motivates stochastic volatility models and Bayesian approaches.
 
-Bayesian Perspective
+## Bayesian Perspective
 
-Bayesian methods allow uncertainty itself to be estimated probabilistically.
+Bayesian methods allow uncertainty to be modeled probabilistically.
 
-Instead of producing only one fixed estimate, Bayesian inference provides:
+Instead of producing only one fixed volatility estimate, Bayesian inference can provide:
 
-posterior distributions,
-uncertainty intervals,
-and latent volatility estimates.
+- posterior distributions
+- uncertainty intervals
+- latent volatility estimates
 
-This framework is particularly useful because financial systems are inherently uncertain and continuously evolving.
+This is useful because financial markets are uncertain and constantly evolving.
 
-The later sections of the referenced time series material introduce stochastic volatility models using latent log-volatility variables and Bayesian inference through posterior distributions and MCMC sampling.
+## Why This Matters
 
-Why These Techniques Matter
+These techniques are useful because financial risk is not constant.
 
-Financial time series techniques are extremely useful because real financial systems rarely satisfy the assumptions of simple constant-variance models.
+## They help answer practical questions such as:
 
-These methods help:
+Is the market currently calm or stressed?
+Are large price movements becoming more frequent?
+How should short-term risk be monitored?
+When might simple constant-risk models underestimate uncertainty?
 
-monitor evolving market uncertainty,
-identify structural changes,
-detect periods of financial stress,
-improve risk assessment,
-and better understand financial dynamics.
+Rather than focusing only on price prediction, financial time series analysis helps us understand the structure and evolution of market risk.
 
-Rather than focusing solely on predicting prices, financial time series analysis focuses on understanding the structure and evolution of uncertainty itself.
-
-Repository Structure
+## Repository Structure
 bayesian-financial-volatility/
 │
 ├── README.md
+├── requirements.txt
+├── .gitignore
+│
 ├── data/
-├── notebooks/
+│
 ├── scripts/
+│   ├── download_data.py
+│   ├── returns_analysis.py
+│   ├── rolling_volatility.py
+│   └── bayesian_sv_model.py
+│
 ├── plots/
-└── requirements.txt
-Possible Extensions
+│   ├── price_series.png
+│   ├── returns_series.png
+│   ├── volatility_clustering.png
+│   └── rolling_volatility.png
+│
+└── notebooks/
+    └── analysis.ipynb
 
-Future extensions may include:
+## Possible Extensions
 
-Hidden Markov Models,
-stochastic volatility estimation,
-Bayesian MCMC methods,
-particle filtering,
-regime-switching models,
-and probabilistic forecasting.
-Technologies
+Future extensions could include:
 
-Possible tools and libraries:
+- stochastic volatility modeling
+- Bayesian MCMC estimation
+- Hidden Markov Models
+- regime-switching models
+- particle filtering
+- probabilistic forecasting
 
-Python
-pandas
-numpy
-matplotlib
-yfinance
-pymc
-arviz
-Disclaimer
+## Tools
 
-This repository is intended for educational and demonstration purposes only. It does not constitute financial advice or investment recommendations.
+Possible tools for implementation:
+
+- Python
+- pandas
+- numpy
+- matplotlib
+- yfinance
+- PyMC
+- ArviZ
+
+## Disclaimer
+
+This repository is for educational and demonstration purposes only. It is not financial advice or an investment recommendation.
