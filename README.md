@@ -58,7 +58,7 @@ The three assets selected here represent different types of financial behavior:
 
 ### S&P 500 Price Over Time
 
-![S&P 500 Price Over Time](plots/sp500_price_over_time.png)
+![S&P 500 Price Over Time](plots/sandp_500_price_over_time.png)
 
 The S&P 500 shows the overall movement of the broader U.S. equity market. Compared with Tesla and Bitcoin, its price path is generally smoother because it represents a diversified market index rather than a single asset. This makes it a useful benchmark for observing general market trends before moving into return and volatility analysis.
 
