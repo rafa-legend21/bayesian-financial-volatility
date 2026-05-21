@@ -58,7 +58,7 @@ The three assets selected here represent different types of financial behavior:
 
 ### S&P 500 Price Over Time
 
-![S&P 500 Price Over Time](plots/sp500_price_over_time.png)
+![S&P 500 Price Over Time](plots/sandp500_price_over_time.png)
 
 The S&P 500 provides a broad view of overall market movement and is useful for understanding general market trends.
 
