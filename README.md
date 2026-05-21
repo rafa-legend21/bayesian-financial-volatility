@@ -129,6 +129,18 @@ When might simple constant-risk models underestimate uncertainty?
 
 Rather than focusing only on price prediction, financial time series analysis helps us understand the structure and evolution of market risk.
 
+## Techniques Demonstrated
+
+This repository gives a basic demonstration of several financial time series ideas:
+
+| Technique | Purpose | Practical Use |
+|---|---|---|
+| Log Returns | Convert prices into comparable financial movements | Return analysis and risk modeling |
+| Rolling Volatility | Measure how risk changes over time | Market risk monitoring |
+| Volatility Clustering | Observe whether high-risk periods persist | Stress detection and portfolio risk |
+| Hidden Volatility | Treat market uncertainty as an unobserved process | Stochastic volatility modeling |
+| Bayesian Perspective | Quantify uncertainty around estimates | Probabilistic risk analysis |
+
 ## Repository Structure
 bayesian-financial-volatility/
 │
