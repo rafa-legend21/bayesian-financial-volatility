@@ -58,21 +58,21 @@ The three assets selected here represent different types of financial behavior:
 
 ### S&P 500 Price Over Time
 
-![S&P 500 Price Over Time](plots/sandp_500_price_over_time.png)
+![S&P 500 Price Over Time](plots/sp500_price_over_time.png)
 
-The S&P 500 provides a broad view of overall market movement and is useful for understanding general market trends.
+The S&P 500 shows the overall movement of the broader U.S. equity market. Compared with Tesla and Bitcoin, its price path is generally smoother because it represents a diversified market index rather than a single asset. This makes it a useful benchmark for observing general market trends before moving into return and volatility analysis.
 
 ### Tesla Price Over Time
 
 ![Tesla Price Over Time](plots/tesla_price_over_time.png)
 
-Tesla is useful for observing the behavior of an individual stock with large price movements and strong volatility.
+Tesla shows stronger price fluctuations than the S&P 500, reflecting the behavior of an individual growth stock. Its price movement is influenced not only by broad market conditions, but also by company-specific news, investor sentiment, and expectations about future growth. This makes Tesla useful for demonstrating higher individual-stock volatility.
 
 ### Bitcoin Price Over Time
 
 ![Bitcoin Price Over Time](plots/bitcoin_price_over_time.png)
 
-Bitcoin is useful for demonstrating highly volatile financial behavior and sharp changes across time.
+Bitcoin displays large and rapid price changes compared with traditional equity assets. Its price behavior is useful for demonstrating highly volatile financial time series, where market uncertainty can change quickly over time. This makes Bitcoin a strong example for studying volatility clustering and risk dynamics.
 
 ## Methodology
 
