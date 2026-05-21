@@ -59,7 +59,7 @@ y_t = 100 \log\left(\frac{S_t}{S_{t-1}}\right)
 ```
 
 where:
-S_t is the asset price at time t
+S_t is the asset price at time t /n
 y_t is the percentage log return
 
 Log returns make price movements easier to compare across time.
