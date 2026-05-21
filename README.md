@@ -259,7 +259,7 @@ bayesian-financial-volatility/
     ├── sp500_rolling_volatility.png
     ├── tesla_rolling_volatility.png
     ├── bitcoin_rolling_volatility.png
-    └── sp500_arima_forecast.png
+    └── bayesian_volatility_tesla.png
 
 
 ## Possible Extensions
