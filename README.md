@@ -64,17 +64,19 @@ where:
 
 Log returns make price movements easier to compare across time.
 
+
 ### 2. Visualize Return Behavior
 
 After computing log returns, the return series is plotted over time.
 
 Typical patterns include:
 
-returns fluctuating around zero
-occasional extreme movements
-periods where large movements appear close together
+- returns fluctuating around zero
+- occasional extreme movements
+- periods where large movements appear close together
 
 These patterns suggest that financial volatility is not constant.
+
 
 ### 3. Identify Volatility Clustering
 
@@ -86,8 +88,8 @@ This is important because it shows that financial risk can persist over time ins
 
 Rolling volatility is computed using rolling standard deviation windows, such as:
 
-20 trading days
-60 trading days
+- 20 trading days
+- 60 trading days
 
 This provides a simple time-varying measure of market uncertainty.
 
@@ -120,7 +122,7 @@ This is useful because financial markets are uncertain and constantly evolving.
 
 These techniques are useful because financial risk is not constant.
 
-## They help answer practical questions such as:
+They help answer practical questions such as:
 
 Is the market currently calm or stressed?
 Are large price movements becoming more frequent?
