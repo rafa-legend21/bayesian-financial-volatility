@@ -107,11 +107,23 @@ These patterns suggest that financial volatility is not constant.
 
 #### Return Plots
 
+##### S&P 500 Log Returns
+
 ![S&P 500 Log Returns](plots/sp500_log_returns.png)
+
+The S&P 500 returns mostly fluctuate around zero, but there are clear periods with large positive and negative movements. The largest return shocks appear around 2020, with another noticeable volatile period around 2025. This suggests that broad market risk is not constant over time.
+
+##### Tesla Log Returns
 
 ![Tesla Log Returns](plots/tesla_log_returns.png)
 
+Tesla shows much larger return swings than the S&P 500. The return plot contains frequent sharp positive and negative movements, especially around 2020, 2022, and 2025. This reflects the higher volatility usually associated with an individual growth stock.
+
+##### Bitcoin Log Returns
+
 ![Bitcoin Log Returns](plots/bitcoin_log_returns.png)
+
+Bitcoin also shows large return movements, including several extreme positive and negative shocks. The return behavior is highly volatile, which makes Bitcoin useful for demonstrating why financial time series methods often focus on risk and uncertainty rather than only price direction.
 
 ### 3. Identify Volatility Clustering
 
@@ -137,17 +149,39 @@ Rolling volatility often increases during:
 - 
 #### Rolling Volatility Plots
 
+##### S&P 500 Rolling Volatility
+
 ![S&P 500 Rolling Volatility](plots/sp500_rolling_volatility.png)
+
+The S&P 500 rolling volatility rises sharply around 2020, showing a major period of market stress. Smaller increases also appear around 2022 and 2025. The 20-day rolling volatility reacts faster to sudden shocks, while the 60-day rolling volatility is smoother and captures more persistent risk.
+
+##### Tesla Rolling Volatility
 
 ![Tesla Rolling Volatility](plots/tesla_rolling_volatility.png)
 
+Tesla has a higher and more unstable volatility pattern than the S&P 500. The rolling volatility reaches very high levels around 2020 and rises again around 2025. This supports the idea of volatility clustering, where high-risk periods tend to persist rather than appear randomly.
+
+##### Bitcoin Rolling Volatility
+
 ![Bitcoin Rolling Volatility](plots/bitcoin_rolling_volatility.png)
+
+Bitcoin rolling volatility is consistently high and contains several sharp spikes. The volatility peak around 2020 is especially large. Compared with the S&P 500, Bitcoin shows stronger instability, which makes it a useful example of highly volatile financial behavior.
 
 ### 5. Interpret Hidden Volatility Dynamics
 
 In financial time series analysis, volatility can be viewed as a hidden process.
 
 The returns are observed, but the true level of market uncertainty is not directly observed. This motivates stochastic volatility models and Bayesian approaches.
+
+### Bayesian Volatility Demonstration
+
+![Tesla Bayesian Volatility Demonstration](plots/bayesian_volatility_tesla.png)
+
+The Bayesian volatility demonstration estimates Tesla's hidden volatility over time. The line represents the posterior mean volatility, while the shaded area represents a 90% uncertainty interval.
+
+The estimated volatility rises sharply around 2020 and increases again around 2025, which is consistent with the rolling volatility plot. The uncertainty interval also becomes wider during high-volatility periods, showing that uncertainty around the volatility estimate increases when the market is more unstable.
+
+This demonstrates the Bayesian idea that volatility is not only changing over time, but also estimated with uncertainty.
 
 ## Bayesian Perspective
 
@@ -194,6 +228,19 @@ This repository gives a basic demonstration of several financial time series ide
 | Hidden Volatility | Treat market uncertainty as an unobserved process | Stochastic volatility modeling |
 | Bayesian Perspective | Quantify uncertainty around estimates | Probabilistic risk analysis |
 
+## Results and Key Observations
+
+The return plots show that all three assets have returns centered around zero, but the size and frequency of extreme movements are very different. The S&P 500 is relatively smoother, while Tesla and Bitcoin show much larger return shocks.
+
+The rolling volatility plots show that financial risk changes over time. Volatility rises during stressed periods and then gradually declines during calmer periods. This supports the idea that financial volatility is not constant.
+
+The 20-day rolling volatility reacts more quickly to sudden market movements, while the 60-day rolling volatility provides a smoother view of longer-term risk conditions.
+
+Tesla and Bitcoin show stronger volatility clustering than the S&P 500. This means high-volatility periods are more persistent and easier to observe in these assets.
+
+The Bayesian volatility demonstration provides an additional perspective by estimating hidden volatility with an uncertainty interval. This shows that financial risk is not directly observed, and statistical methods can help estimate both the level of risk and the uncertainty around that estimate.
+
+Overall, these plots show that financial time series techniques are useful for understanding market risk, volatility persistence, and uncertainty dynamics. The goal is not to perfectly predict future prices, but to better understand how financial risk evolves through time.
 ## Repository Structure
 bayesian-financial-volatility/
 │
@@ -210,19 +257,17 @@ bayesian-financial-volatility/
 │   └── bayesian_sv_model.py
 │
 ├── plots/
-│   ├── sp500_price_over_time.png
-│   ├── tesla_price_over_time.png
-│   ├── bitcoin_price_over_time.png
-│   ├── sp500_log_returns.png
-│   ├── tesla_log_returns.png
-│   ├── bitcoin_log_returns.png
-│   ├── sp500_rolling_volatility.png
-│   ├── tesla_rolling_volatility.png
-│   ├── bitcoin_rolling_volatility.png
-│   └── sp500_arima_forecast.png
-│
-└── notebooks/
-    └── analysis.ipynb
+    ├── sp500_price_over_time.png
+    ├── tesla_price_over_time.png
+    ├── bitcoin_price_over_time.png
+    ├── sp500_log_returns.png
+    ├── tesla_log_returns.png
+    ├── bitcoin_log_returns.png
+    ├── sp500_rolling_volatility.png
+    ├── tesla_rolling_volatility.png
+    ├── bitcoin_rolling_volatility.png
+    └── sp500_arima_forecast.png
+
 
 ## Possible Extensions
 
