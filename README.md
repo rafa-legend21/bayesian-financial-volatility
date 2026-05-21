@@ -146,7 +146,8 @@ Rolling volatility often increases during:
 - economic shocks
 - geopolitical uncertainty
 - major market corrections
-- 
+
+
 #### Rolling Volatility Plots
 
 ##### S&P 500 Rolling Volatility
