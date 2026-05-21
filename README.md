@@ -105,6 +105,13 @@ Typical patterns include:
 
 These patterns suggest that financial volatility is not constant.
 
+#### Return Plots
+
+![S&P 500 Log Returns](plots/sp500_log_returns.png)
+
+![Tesla Log Returns](plots/tesla_log_returns.png)
+
+![Bitcoin Log Returns](plots/bitcoin_log_returns.png)
 
 ### 3. Identify Volatility Clustering
 
@@ -127,6 +134,14 @@ Rolling volatility often increases during:
 - economic shocks
 - geopolitical uncertainty
 - major market corrections
+- 
+#### Rolling Volatility Plots
+
+![S&P 500 Rolling Volatility](plots/sp500_rolling_volatility.png)
+
+![Tesla Rolling Volatility](plots/tesla_rolling_volatility.png)
+
+![Bitcoin Rolling Volatility](plots/bitcoin_rolling_volatility.png)
 
 ### 5. Interpret Hidden Volatility Dynamics
 
@@ -145,6 +160,14 @@ Instead of producing only one fixed volatility estimate, Bayesian inference can 
 - latent volatility estimates
 
 This is useful because financial markets are uncertain and constantly evolving.
+
+### Forecasting Demonstration
+
+A simple ARIMA forecasting example is included to show how historical financial data can be used to generate a basic time series forecast.
+
+![S&P 500 ARIMA Forecast](plots/sp500_arima_forecast.png)
+
+This forecast should be interpreted as a demonstration of the forecasting workflow, not as a reliable prediction of future market prices.
 
 ## Why This Matters
 
@@ -187,10 +210,16 @@ bayesian-financial-volatility/
 │   └── bayesian_sv_model.py
 │
 ├── plots/
-│   ├── price_series.png
-│   ├── returns_series.png
-│   ├── volatility_clustering.png
-│   └── rolling_volatility.png
+│   ├── sp500_price_over_time.png
+│   ├── tesla_price_over_time.png
+│   ├── bitcoin_price_over_time.png
+│   ├── sp500_log_returns.png
+│   ├── tesla_log_returns.png
+│   ├── bitcoin_log_returns.png
+│   ├── sp500_rolling_volatility.png
+│   ├── tesla_rolling_volatility.png
+│   ├── bitcoin_rolling_volatility.png
+│   └── sp500_arima_forecast.png
 │
 └── notebooks/
     └── analysis.ipynb
