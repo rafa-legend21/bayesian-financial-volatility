@@ -202,10 +202,10 @@ These techniques are useful because financial risk is not constant.
 
 They help answer practical questions such as:
 
-Is the market currently calm or stressed?
-Are large price movements becoming more frequent?
-How should short-term risk be monitored?
-When might simple constant-risk models underestimate uncertainty?
+- Is the market currently calm or stressed?
+- Are large price movements becoming more frequent?
+- How should short-term risk be monitored?
+- When might simple constant-risk models underestimate uncertainty?
 
 Rather than focusing only on price prediction, financial time series analysis helps us understand the structure and evolution of market risk.
 
