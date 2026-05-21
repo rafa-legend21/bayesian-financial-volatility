@@ -55,7 +55,7 @@ Instead of analyzing raw prices directly, financial time series models usually w
 The log return is defined as:
 
 ```math
-y_t = 100 \log\left(\frac{S_t}{S_{t-1}}\right)
+y_t = 100 * \log\left(\frac{S_t}{S_{t-1}}\right)
 ```
 
 where:
