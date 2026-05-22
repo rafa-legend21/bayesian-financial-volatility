@@ -36,15 +36,13 @@ More specifically, it explores:
 
 ## Data
 
-The analysis can be applied to historical financial market data such as:
+This demonstration uses historical financial market data for three assets:
 
 - S&P 500
-- Apple
 - Tesla
 - Bitcoin
-- exchange rates
 
-The S&P 500 is a natural first choice because it represents broad market behavior and clearly shows volatility changes during different financial periods.
+These assets were selected because they represent different types of financial behavior. The S&P 500 represents broad market movement, Tesla represents an individual high-growth stock, and Bitcoin represents a cryptocurrency with large price swings.
 
 ## Asset Price Overview
 
@@ -234,7 +232,10 @@ Tesla and Bitcoin show stronger volatility clustering than the S&P 500. This mea
 The Bayesian volatility demonstration provides an additional perspective by estimating hidden volatility with an uncertainty interval. This shows that financial risk is not directly observed, and statistical methods can help estimate both the level of risk and the uncertainty around that estimate.
 
 Overall, these plots show that financial time series techniques are useful for understanding market risk, volatility persistence, and uncertainty dynamics. The goal is not to perfectly predict future prices, but to better understand how financial risk evolves through time.
+
 ## Repository Structure
+
+```text
 bayesian-financial-volatility/
 │
 ├── README.md
@@ -250,17 +251,17 @@ bayesian-financial-volatility/
 │   └── bayesian_sv_model.py
 │
 ├── plots/
-    ├── sp500_price_over_time.png
-    ├── tesla_price_over_time.png
-    ├── bitcoin_price_over_time.png
-    ├── sp500_log_returns.png
-    ├── tesla_log_returns.png
-    ├── bitcoin_log_returns.png
-    ├── sp500_rolling_volatility.png
-    ├── tesla_rolling_volatility.png
-    ├── bitcoin_rolling_volatility.png
-    └── bayesian_volatility_tesla.png
-
+│   ├── sp500_price_over_time.png
+│   ├── tesla_price_over_time.png
+│   ├── bitcoin_price_over_time.png
+│   ├── sp500_log_returns.png
+│   ├── tesla_log_returns.png
+│   ├── bitcoin_log_returns.png
+│   ├── sp500_rolling_volatility.png
+│   ├── tesla_rolling_volatility.png
+│   ├── bitcoin_rolling_volatility.png
+│   └── bayesian_volatility_tesla.png
+```
 
 ## Possible Extensions
 
